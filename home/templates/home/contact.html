@@ -18,9 +18,7 @@
     <header>
       <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container">
-          <a class="navbar-brand fade-in" href="{% url 'index' %}"
-            >Job Finder</a
-          >
+          <a class="navbar-brand fade-in" href="{% url 'home' %}">Job Finder</a>
           <button
             class="navbar-toggler"
             type="button"
@@ -34,30 +32,28 @@
           <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ms-auto">
               <li class="nav-item">
-                <a class="nav-link fade-in-delay" href="{% url 'index' %}"
+                <a class="nav-link fade-in-delay active" href="{% url 'home' %}"
                   >Home</a
                 >
               </li>
               <li class="nav-item">
-                <a class="nav-link fade-in-delay" href="{% url 'jobs' %}"
+                <a class="nav-link fade-in-delay" href="{% url 'Sjobs' %}"
                   >Jobs</a
                 >
               </li>
               <li class="nav-item">
-                <a class="nav-link fade-in-delay" href="{% url 'post_jobs' %}"
+                <a class="nav-link fade-in-delay" href="{% url 'Spost_jobs' %}"
                   >Post a Job</a
                 >
               </li>
               <li class="nav-item">
-                <a
-                  class="nav-link fade-in-delay active"
-                  href="{% url 'contact' %}"
+                <a class="nav-link fade-in-delay" href="{% url 'Scontact' %}"
                   >Contact</a
                 >
               </li>
               <li class="nav-item">
-                <a class="nav-link fade-in-delay" href="{% url 'login' %}"
-                  >Login</a
+                <a class="nav-link fade-in-delay" href="{%url 'profile' %}"
+                  >Profile</a
                 >
               </li>
             </ul>

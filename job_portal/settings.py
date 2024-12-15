@@ -25,13 +25,13 @@ SECRET_KEY = 'django-insecure-nt0-y@w_mhr%r#8&*58=36+(%ic2l3s$z5k0ap%4&csf=t01mj
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['.vercel.app']
+ALLOWED_HOSTS = ['kael21.pythonanywhere.com']
 
 
 # Application definition
 
 INSTALLED_APPS = [
-    'home', 
+    'home',
     'widget_tweaks',
     'django.contrib.admin',
     'django.contrib.auth',
@@ -120,6 +120,7 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
+STATICFILES_URL = '/staticfiles/'
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 

@@ -91,7 +91,10 @@
                   <strong>Employment Type: </strong> {{ job.employment_type }}
                 </p>
                 <p class="card-text">
-                  <strong>Salary: </strong>{{ job.description|slice:":200" }}...
+                  <strong>Salary: </strong>{{ job.salary|slice:":200" }}...
+                </p>
+                <p class="card-text">
+                  <strong>Job Description: </strong>{{ job.description|slice:":200" }}...
                 </p>
                 <!-- Apply Now Button -->
                 <button

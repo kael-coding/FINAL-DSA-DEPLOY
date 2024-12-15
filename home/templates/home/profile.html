@@ -7,12 +7,12 @@
     <link rel="stylesheet" href="styles.css">
     <style>
         body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
+            font-family: "Poppins", sans-serif;
+            background: rgb(190, 185, 185);
             margin: 0;
             padding: 0;
         }
-        
+
         .profile-container {
             width: 100%;
             max-width: 400px;
@@ -23,28 +23,28 @@
             padding: 20px;
             text-align: center;
         }
-        
+
         .profile-header {
             display: flex;
             align-items: center;
             justify-content: space-between;
         }
-        
+
         .profile-header h2 {
             margin: 0;
             font-size: 24px;
         }
-        
+
         .back-btn {
             font-size: 20px;
             text-decoration: none;
             color: #007bff;
         }
-        
+
         .back-btn:hover {
             color: #0056b3;
         }
-        
+
         .logout-btn {
             font-size: 16px;
             text-decoration: none;
@@ -53,21 +53,21 @@
             border: 1px solid #ff4d4d;
             border-radius: 5px;
         }
-        
+
         .logout-btn:hover {
             background-color: #ff4d4d;
             color: white;
         }
-        
+
         .profile-details {
             margin-top: 20px;
         }
-        
+
         .username {
             font-size: 18px;
             color: #333;
         }
-        
+
         .username span {
             font-weight: bold;
             color: #007bff;
@@ -76,10 +76,10 @@
     <script>
         // JavaScript function for logout confirmation
         function confirmLogout(event) {
-            event.preventDefault(); // Prevents the default logout action
+            event.preventDefault();
             const userConfirmed = confirm("Are you sure you want to log out?");
             if (userConfirmed) {
-                window.location.href = event.target.href; // Redirects to the logout page if confirmed
+                window.location.href = event.target.href;
             }
         }
     </script>
@@ -89,12 +89,12 @@
         <div class="profile-header">
             <a href="{%url 'home'%}" class="back-btn">&#8592; Back</a>
             <h2>User Profile</h2>
-            <a href="{% url 'logout' %}" class="logout-btn" onclick="confirmLogout(event)">Logout</a> 
+            <a href="{% url 'logout' %}" class="logout-btn" onclick="confirmLogout(event)">Logout</a>
         </div>
         <div class="profile-details">
-            <p class="username">Username: <span>{{username}}</span></p> 
+            <p class="username">Username: <span>{{username}}</span></p>
         </div>
     </div>
-    
+
 </body>
 </html>
