@@ -27,7 +27,6 @@ def front_contact(request):
     return render(request, 'front-page/contact.html')
 
 
-
 def Succes_jobs(request):
     jobs = Job.objects.all() 
     if request.method == 'POST' and 'apply' in request.POST:
@@ -99,6 +98,8 @@ def signup_view(request):
             form.save()
             messages.success(request, 'Account created successfully')
             return redirect('login')
+        else:
+            messages.error(request, 'An error occurred during registration')
     else:
         form = SignUpForm()
     return render(request, 'accounts/signup.html', {'form': form})
